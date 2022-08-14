@@ -1,7 +1,7 @@
-
+from stepper.stepper import run
 
 def main():
-    print("hello world!")
+    run()
 
 
 if __name__ == "__main__":
