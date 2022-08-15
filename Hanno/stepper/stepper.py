@@ -8,9 +8,6 @@ GPIO_pins = (18, 15, 14) # Microstep Resolution MS1-MS3 -> GPIO Pin
 direction= 25       # Direction -> GPIO Pin
 step = 24      # Step -> GPIO Pin
 
-system_pins = {
-    "stepper" : (23, GPIO.OUT),
-}
 
 # Declare a named instance of class pass GPIO pins numbers
 mymotortest = RpiMotorLib.A4988Nema(direction, step, GPIO_pins, "A4988")

@@ -1,7 +1,8 @@
-from stepper.stepper import run
+from stepper import Stepper
 
 def main():
-    run()
+    motor = Stepper()
+    motor.move_stepper(90)
 
 
 if __name__ == "__main__":
