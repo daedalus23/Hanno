@@ -19,24 +19,17 @@ def setup_gpio(pins):
         GPIO.setup(pin[0], pin[1])
 
 
-sleepTime = 3
- 
-stepDelay = 0.0004
-stepType = "1/8"
-travelCounts = 10000
-movementDir = "right"
+# sleepTime = 3
+# stepDelay = 0.0004
+# stepType = "1/8"
+# travelCounts = 10000
+# movementDir = "right"
 
 
-if movementDir == "right":
-    movementDir = False
-elif movementDir == "left":
-    movementDir = True
+# if movementDir == "right":
+#     movementDir = False
+# elif movementDir == "left":
+#     movementDir = True
 
-def run():
-    while True:
-        mymotortest.motor_go(True, stepType, travelCounts, stepDelay, False, .05)
-        mymotortest.motor_go(False, stepType, travelCounts, stepDelay, False, .05)
-
-        break
-
-# motor_go(clockwise=False, steptype="Full", steps=200, stepdelay=.005, verbose=False, initdelay=.05)
+def run(clockwise=False, steptype="1/8", steps=200, stepdelay=.0004, verbose=False, initdelay=.05):
+    mymotortest.motor_go(clockwise, steptype, steps, stepdelay, verbose, initdelay)
