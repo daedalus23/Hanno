@@ -23,7 +23,7 @@ sleepTime = 3
  
 stepDelay = 0.0004
 stepType = "1/8"
-travelCounts = 900
+travelCounts = 10000
 movementDir = "right"
 
 
@@ -34,15 +34,9 @@ elif movementDir == "left":
 
 def run():
     while True:
-        mymotortest.motor_go(movementDir, stepType, travelCounts, stepDelay, False, .05)
-        # mymotortest.motor_go(movementDir, stepType, travelCounts, stepDelay, False, .05)
-        # mymotortest.motor_go(movementDir, stepType, travelCounts, stepDelay, False, .05)
-        # mymotortest.motor_go(movementDir, stepType, travelCounts, stepDelay, False, .05)
-        # time.sleep(0.1)
-        # mymotortest.motor_go(True, stepType, travelCounts, stepDelay, False, .05)
-        # mymotortest.motor_go(True, stepType, travelCounts, stepDelay, False, .05)
-        # mymotortest.motor_go(True, stepType, travelCounts, stepDelay, False, .05)
-        # mymotortest.motor_go(True, stepType, travelCounts, stepDelay, False, .05)
+        mymotortest.motor_go(True, stepType, travelCounts, stepDelay, False, .05)
+        mymotortest.motor_go(False, stepType, travelCounts, stepDelay, False, .05)
 
+        break
 
 # motor_go(clockwise=False, steptype="Full", steps=200, stepdelay=.005, verbose=False, initdelay=.05)
