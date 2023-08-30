@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<devices>
+    <service name="laser">
+        <configuration>
+            <timeout type="int">10</timeout>
+            <pin type="int">6</pin>
+            <setwarnings type="bool">False</setwarnings>
+        </configuration>
+        <attributes>
+            <cycle type="float">0.1</cycle>
+            <multiplier type="float">0.5</multiplier>
+        </attributes>
+        <actions>
+            <command id="on">
+                <continuous>True</continuous>
+            </command>
+            <command id="off">
+                <continuous>False</continuous>
+            </command>
+            <command id="flash">
+                <continuous>True</continuous>
+            </command>
+        </actions>
+    </service>
+    <service name="servo">
+        <configuration>
+            <timeout type="int">10</timeout>
+            <pin type="int">8</pin>
+            <freq type="int">50</freq>
+            <setwarnings type="bool">False</setwarnings>
+            <high_position type="float">1</high_position>
+            <low_position type="float">6</low_position>
+            <move_delay type="int">2</move_delay>
+            <cycle_delay type="float">0.25</cycle_delay>
+            <initialization_point type="int">0</initialization_point>
+        </configuration>
+        <attributes>
+            <cycle_movement_setpoint type="float">1.0</cycle_movement_setpoint>
+        </attributes>
+        <actions>
+            <command id="servo_cycle">
+                <continuous>True</continuous>
+            </command>
+            <command id="manual_move">
+                <continuous>False</continuous>
+            </command>
+            <command id="home">
+                <continuous>False</continuous>
+            </command>
+        </actions>
+    </service>
+    <service name="proximity">
+        <configuration>
+            <pin type="int">7</pin>
+            <setwarnings type="bool">False</setwarnings>
+        </configuration>
+        <attributes>
+        </attributes>
+        <actions>
+            <command id="state">
+                <continuous>False</continuous>
+            </command>
+        </actions>
+    </service>
+    <service name="stepper">
+        <configuration>
+            <timeout type="int">10</timeout>
+            <GPIO_pin_1 type="int">18</GPIO_pin_1>
+            <GPIO_pin_2 type="int">15</GPIO_pin_2>
+            <GPIO_pin_3 type="int">14</GPIO_pin_3>
+            <direction type="int">25</direction>
+            <step_pin type="int">24</step_pin>
+            <motor_type type="str">A4988</motor_type>
+            <setwarnings type="bool">False</setwarnings>
+        </configuration>
+        <attributes>
+        </attributes>
+        <actions>
+            <command id="run">
+                <continuous>True</continuous>
+            </command>
+            <command id="cycle">
+                <continuous>True</continuous>
+            </command>
+            <command id="home">
+                <continuous>False</continuous>
+            </command>
+        </actions>
+    </service>
+</devices>
